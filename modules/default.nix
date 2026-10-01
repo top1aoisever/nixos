@@ -1,0 +1,20 @@
+{
+  imports = [
+    ./age.nix
+    ./boot.nix
+    ./desktop.nix
+    ./fonts.nix
+    ./gaming.nix
+    ./hardening.nix
+    ./hardware.nix
+    ./home.nix
+    ./i18n.nix
+    ./larp.nix
+    ./networking.nix
+    ./nix.nix
+    ./services.nix
+    ./users.nix
+    ./virtual.nix
+    ./zram.nix
+  ];
+}
