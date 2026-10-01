@@ -55,25 +55,30 @@
         target = ".config/quickshell";
       };
 
-      # gtk3 = {
-      #   source = "config/gtk-3.0/settings.ini";
-      #   target = ".config/gtk-3.0/settings.ini";
-      # };
-      #
-      # gtk4 = {
-      #   source = "config/gtk-4.0/settings.ini";
-      #   target = ".config/gtk-4.0/settings.ini";
-      # };
+      gtk2 = {
+          source = "config/gtkrc-2.0";
+          target = ".config/gtkrc-2.0";
+      };
 
-      # qt5ct = {
-      #   source = "config/qt5ct/qt5ct.conf";
-      #   target = ".config/qt5ct/qt5ct.conf";
-      # };
-      #
-      # qt6ct = {
-      #   source = "config/qt6ct/qt6ct.conf";
-      #   target = ".config/qt6ct/qt6ct.conf";
-      # };
+      gtk3 = {
+        source = "config/gtk-3.0";
+        target = ".config/gtk-3.0";
+      };
+
+      gtk4 = {
+        source = "config/gtk-4.0";
+        target = ".config/gtk-4.0";
+      };
+
+      qt5ct = {
+        source = "config/qt5ct";
+        target = ".config/qt5ct";
+      };
+
+      qt6ct = {
+        source = "config/qt6ct";
+        target = ".config/qt6ct";
+      };
 
       gitconfig = {
           source = "config/.gitconfig";
@@ -106,39 +111,4 @@
       };
     };
   };
-
-  # system.activationScripts.dotfiles.text = ''
-  #   HOME=$(getent passwd "${vars.userName}" | cut -d: -f6)
-  #   NIX_CONFIG_PATH="$HOME/nixos"
-  #
-  #
-  #   # burn everything before reconfiguring
-  #   rm "$HOME/.bashrc"
-  #
-  #   mkdir -p "$HOME/.config"
-  #   chown -h "${vars.userName}":users "$HOME/.config"
-  #
-  #   mkdir -p "$HOME/.config/niri"
-  #   ln -sfn $NIX_CONFIG_PATH/config/niri/config.kdl "$HOME/.config/niri/config.kdl"
-  #
-  #   mkdir -p "$HOME/.config/foot"
-  #   ln -sfn $NIX_CONFIG_PATH/config/foot/foot.ini "$HOME/.config/foot/foot.ini"
-  #
-  #   ln -sfn $NIX_CONFIG_PATH/config/wallpapers "$HOME/.config/wallpapers"
-  #
-  #   ln -sfn $NIX_CONFIG_PATH/config/.bashrc "$HOME/.bashrc"
-  #
-  #   mkdir -p "$HOME/.config/nvim"
-  #   ln -sfn $NIX_CONFIG_PATH/config/nvim/init.lua "$HOME/.config/nvim/init.lua"
-  #
-  #   mkdir -p "$HOME/.config/fastfetch"
-  #   ln -sfn $NIX_CONFIG_PATH/config/fastfetch/config.jsonc "$HOME/.config/fastfetch/config.jsonc"
-  #
-  #   # reload desktop list
-  #   rm -rf $HOME/.cache/tofi-drun
-  #
-  #   chown -h "${vars.userName}":users "$HOME/.config/niri" "$HOME/.config/foot" "$HOME/.config/wallpapers" "$HOME/.bashrc" "$HOME/.config/nvim" "$HOME/.config/fastfetch"
-  #
-  #   echo "user home directory reset"
-  #   '';
 }
