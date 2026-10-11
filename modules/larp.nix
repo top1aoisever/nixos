@@ -4,6 +4,12 @@
     neovim # terminal text editor
     vim # backup text editor
 
+    tree-sitter # syntax highlighting
+
+    emmylua-ls # lua lsp
+
+    vscodium # why not, it's the industry standard
+
     btop # task manager
     fastfetch # system info fetch
 
@@ -45,18 +51,22 @@
 
     sleuthkit # forensics
 
-    gcc # gnu c compiler
-    gdb # debugger
+    # c/c++
+    clang-tools
+    gcc
+    gdb
 
-    cmake # to build c/c++ projects 
-    gnumake # to accompany cmake
+    cmake
+    gnumake
 
     # stable rust toolchain
     rustc
     cargo
+    rust-analyzer
 
     # go programming language
     go
+    gopls
 
     nasm # netwide assembler 
 
@@ -66,6 +76,8 @@
       pillow
       numpy
     ]))
+
+    pyrefly
 
     dislocker # mount bitlocker-encrypted disk images
 
@@ -77,6 +89,10 @@
     texpresso
     # tex engine
     tectonic
+
+    obsidian
+
+    blender
 
   ];
 }
